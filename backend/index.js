@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 
 app.use(cors(
   {
-    origin: [""],
+    origin: ["https://go-food-backend-zeta.vercel.app"],
     methods: ["POST","GET"],
     credentials: true
   }
