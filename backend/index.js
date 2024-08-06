@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 
 app.use(cors(
   {
-    origin: ["https://go-food-backend-rho.vercel.app"],
+    origin: ["https://go-food-backend-ruby.vercel.app"],
     methods: ["POST","GET"],
     credentials: true
   }
