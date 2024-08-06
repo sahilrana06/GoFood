@@ -7,6 +7,7 @@ global.foodData = require('./db')(function call(err, data, CatData) {
 })
 
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const port = 5000
 app.use((req, res, next) => {
@@ -17,6 +18,15 @@ app.use((req, res, next) => {
   );
   next();
 });
+
+app.use(cors(
+  {
+    origin: [""],
+    methods: ["POST","GET"],
+    credentials: true
+  }
+));
+
 app.use(express.json())
 
 app.get('/', (req, res) => {
